@@ -13,7 +13,7 @@ const upload = multer();
 
 const uploadFile = async (fileObject) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: "../KEY_FILE.json",
+    keyFile: "./KEY_FILE.json",
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
 
