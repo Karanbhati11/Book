@@ -1,6 +1,6 @@
 [build]
     functions = "functions"
-
+    included_files = ["KEY_FILE.json"]
     [[redirects]]
     to="/.netlify/functions/api/:splat"
     from ="/*"
