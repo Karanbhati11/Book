@@ -3,7 +3,7 @@ async function searchFile() {
   const { google } = require("googleapis");
   const path = require("path");
   const auth = new google.auth.GoogleAuth({
-    keyFile: "var/task/functions/keys.json",
+    keyFile: "functions/keys.json",
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
   const service = google.drive({ version: "v3", auth });
