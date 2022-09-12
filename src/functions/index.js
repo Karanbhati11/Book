@@ -5,7 +5,7 @@ const Delete = require("./Delete");
 const app = express();
 const router = express.Router();
 const serverless = require("serverless-http");
-var cors = require('cors')
+const cors = require('cors')
 
 app.use(cors())
 
