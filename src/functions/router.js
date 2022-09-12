@@ -36,7 +36,7 @@ const uploadFile = async (fileObject) => {
   ID = data.id;
 };
 
-uploadRouter.post("/upload", upload.any(), async (req, res) => {
+uploadRouter.post("/uploadfile", upload.any(), async (req, res) => {
   try {
     const { body, files } = req;
 
