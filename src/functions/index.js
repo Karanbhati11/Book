@@ -4,18 +4,11 @@ const Retrieve = require("./Retrieve");
 const Delete = require("./Delete");
 const app = express();
 const router = express.Router();
-// const port = process.env.PORT || 8080;
-// const cors = require("cors");
 const serverless = require("serverless-http");
+var cors = require('cors')
 
-// const whitelist = ["http://localhost:3000"];
-// const corsOptions = {
-//   origin: function (origin, callback) {
-//     callback(null, true);
-//   },
-//   credentials: true,
-// };
-// app.use(cors(corsOptions));
+app.use(cors())
+
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 router.use(uploadRouter);
