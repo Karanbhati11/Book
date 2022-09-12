@@ -1,7 +1,8 @@
 [build]
     functions = "functions"
-
-    [[redirects]]
+[functions]
+  included_files = ["functions/**"]
+[[redirects]]
     to="/.netlify/functions/index/:splat"
     from ="/*"
     status=200
