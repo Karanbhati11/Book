@@ -21,6 +21,7 @@ router.use(express.urlencoded({ extended: true }));
 router.use(uploadRouter);
 router.get("/", (req, res) => {
   res.send("hello");
+  console.log(__dirname);
 });
 router.get("/response", (req, res) => {
   Retrieve().then((resp) => {
