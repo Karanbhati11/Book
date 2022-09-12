@@ -3,7 +3,7 @@ async function Delete() {
   const { google } = require("googleapis");
   const path = require("path");
   const auth = new google.auth.GoogleAuth({
-    keyFile: path.join(__dirname, "KEY_FILE.json"),
+    keyFile:path.resolve(__dirname, "keys.json"),
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
   const service = google.drive({ version: "v3", auth });
