@@ -4,6 +4,7 @@ const stream = require("stream");
 const express = require("express");
 const multer = require("multer");
 const { google } = require("googleapis");
+const path = require("path");
 // const GOOGLE_API_FOLDER_ID = "1OZbs8PO60f80y7VI9iS8mpxOAk8xmnM4";
 // const GOOGLE_API_FOLDER_ID = "1oIlVFLai5Lm4M6t1fVAeDoWb99kV_y7v";
 const GOOGLE_API_FOLDER_ID = "1X_If3_GzAEjgNCj7SXkkCLkYHmxVDELS";
@@ -13,7 +14,7 @@ const upload = multer();
 
 const uploadFile = async (fileObject) => {
   const auth = new google.auth.GoogleAuth({
-    keyFile: "KEY_FILE.json",
+    keyFile: path.join(__dirname, "KEY_FILE.json"),
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
 
